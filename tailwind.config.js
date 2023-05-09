@@ -8,7 +8,10 @@ export default {
   theme: {
     extend: {
       screens: {
-        ts: '900px'
+        ds: '900px'
+      },
+      height: {
+        main: 'calc(100vh - 8rem)'
       },
       spacing: {
         '0.2': '0.2rem',
@@ -35,18 +38,40 @@ export default {
         '85': '85%',
         '90': '90%'
       },
+      padding: {
+        menu : '5%'
+      },
       fontSize: {
         xs: '1.4rem',
         sm: '1.6rem',
         md: '1.8rem',
         base: '2.4rem',
         lg: '3.2rem',
-        xl: '4.2rem'
+        xl: '4.2rem',
+        '2xl': '4.5rem',
+        '3xl': '5.2rem'
       },
       borderRadius: {
         sm: '0.6rem',
         md: '0.8rem',
         lg: '1rem'
+      },
+      gridTemplateColumns: {
+        main: '1fr 0.5fr',
+        option: 'repeat(auto-fit, minmax(30rem, 1fr))',
+      },
+      gridTemplateRows: {
+        main: '70% 25%',
+        hero: '1fr auto',
+        optionlg: '14rem',
+        optionds: '18rem',
+        optionsm: '16rem 16rem 16rem',
+      },
+      gridAutoRows: {
+        hero: '1fr'
+      },
+      aspectRatio: {
+        option: '4/5'
       },
       colors: {
         red: 'hsl(5, 85%, 63%)',

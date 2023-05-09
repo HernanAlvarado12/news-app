@@ -1,9 +1,9 @@
 
-const Picture = ({ classList = '', mobile, desktop, alt = '', breakpoint }) => {
+const Picture = ({ classPicture, classImage = '', mobile, desktop, alt = '', breakpoint }) => {
     return (
-        <picture className={classList}>
+        <picture className={classPicture}>
             <source media ={`(min-width: ${breakpoint})`} srcSet={desktop} />
-            <img src={mobile} alt={alt} />
+            <img className={classImage} src={mobile} alt={alt} />
         </picture>
     )
 }
