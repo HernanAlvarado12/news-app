@@ -53,7 +53,7 @@ export default {
         orange: 'hsl(35, 77%, 62%)',
         white: 'hsl(36, 100%, 99%)',
         blue: {
-          default: 'hsl(233, 8%, 79%)',
+          DEFAULT: 'hsl(233, 8%, 79%)',
           100: 'hsl(236, 13%, 42%)',
           200: 'hsl(240, 100%, 5%)'
         },
