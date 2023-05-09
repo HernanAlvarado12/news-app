@@ -1,3 +1,4 @@
+import { createElement } from "react"
 
 const comments = [
     {
@@ -16,23 +17,24 @@ const comments = [
 
 const options = [
     {
-        image: '..assets/pcs.jpg',
+        image: './src/assets/pcs.jpg',
         alt: 'pcs image',
         title: `Reviving Retro PCs`,
         text: `What happens when old PCs are given modern upgrades?`
     },
     {
-        image: '..assets/laptops.jpg',
+        image: './src/assets/laptops.jpg',
         alt: 'laptops image',
         title: `Top 10 Laptops of 2022`,
         text: `Our best picks for various needs and budgets.`
     },
     {
-        image: '../assets/gaming.jpg',
+        image: './src/assets/gaming.jpg',
         alt: 'console gaming',
         title: `The Growth of Gaming`,
         text: `How the pandemic has sparked fresh opportunities.`
     }
 ]
+
 
 export { comments, options }
