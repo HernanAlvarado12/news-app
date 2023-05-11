@@ -6,6 +6,8 @@ import { comments, options } from "../helpers/data"
 import mobile from "../assets/mobile.jpg"
 import desktop from "../assets/desktop.jpg"
 
+const images = ['../assets/pcs.jpg', '../assets//laptops.jpg', '../assets/gaming.jpg']
+
 
 const Main = () => {
     return (
@@ -26,7 +28,7 @@ const Main = () => {
                     {comments.map((item, key) => <Comment key={key} classList="py-2 first-of-type:border-b first-of-type:border-blue-100 odd:border-b odd:border-blue-100" title={item.title} text={item.text} color="white" />)}
             </section>
             <section className="grid items-center gap-y-3 sm:grid-cols-option sm:grid-rows-optionsm sm:gap-3 ds:grid-rows-optionds ds:gap-3.5 lg:col-span-2 lg:grid-cols-3 lg:grid-rows-optionlg">
-                {options.map((item, key) => <Option key={key} image={item.image} alt={item.alt} number={`0${key}`} title={item.title} text={item.text} />)}
+                {options.map((item, key) => <Option key={key} image={new URL(images[key], import.meta.url).href} alt={item.alt} number={`0${key}`} title={item.title} text={item.text} />)}
             </section>
         </main>
     )

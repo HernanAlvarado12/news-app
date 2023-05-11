@@ -2,7 +2,7 @@ import { Item } from "./Item"
 import logo from "../assets/logo.svg"
 import menu from "../assets/menu.svg"
 import menuClose from "../assets/menu-close.svg"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 const items = ['Home', 'New', 'Popular', 'Trending', 'Categories']
 
@@ -12,6 +12,12 @@ const Header = () => {
     const handleClick = () => {
         menuRef.current.classList.toggle('hidden')
     }
+
+    useEffect(() => {
+        const changeClass = () => menuRef.current.classList.add('hidden')
+        window.matchMedia('(max-width: 899px)').addEventListener('change', changeClass)
+        return () => window.removeEventListener('change', changeClass)
+    }, [])
 
     return (
         <header>
